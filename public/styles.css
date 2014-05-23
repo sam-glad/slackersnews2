@@ -1,0 +1,99 @@
+.wholepage {
+background-color: #f6f6ef;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+.bord {
+    border-style: solid;
+    border-color: orange;
+}
+
+
+.title {
+  margin-left: 60px;
+  background: #ff6600;
+  margin-right: 60px;
+  font-family: Verdana;
+font-size: 10pt;
+}
+
+.text {
+  float: right;
+  display: block;
+  color: #000000;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.nav {
+  padding: 0px;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav > li > a {
+color: #000000;
+  text-decoration: none;
+}
+
+
+
+.nav2 > li > a {
+color: #828282;
+  text-decoration: none;
+}
+
+
+
+.nav2 {
+    padding: 0px;
+  margin: 0;
+}
+
+.nav2 li {
+  margin-top: 12px;
+  margin-left: 27px;
+  font-family: Verdana;
+font-size: 10pt;
+color: #828282;
+}
+
+.nav3 {
+  text-align: center;
+}
+
+.nav3 li{
+ display: inline-block;
+  list-style: none;
+  font-family: Verdana;
+font-size: 7pt;
+
+}
+
+.nav3 > li > a {
+color: #000000;
+  text-decoration: none;
+}
+
+.bot {
+background-color: #f6f6ef;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+.formc {
+float: center;
+font-family: Verdana;
+font-size: 10pt;
+color: #828282;
+
+}
+
+
