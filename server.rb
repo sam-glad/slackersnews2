@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'redis'
 require 'json'
+require 'pry'
 
 def get_connection
   if ENV.has_key?("REDISCLOUD_URL")
@@ -39,6 +40,7 @@ end
 
 get '/' do
   @read = find_articles
+  binding.pry
   erb :index
 end
 
