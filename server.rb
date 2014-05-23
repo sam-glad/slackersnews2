@@ -25,7 +25,6 @@ end
 
 def save_article(url, title, description)
   article = { url: url, title: title, description: description }
-
   redis = get_connection
   redis.rpush("slacker:articles", article.to_json)
 end
@@ -63,4 +62,3 @@ post '/article_new' do
   end
     redirect '/'
 end
-
