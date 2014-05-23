@@ -20,7 +20,7 @@ def find_articles
     articles << JSON.parse(article, symbolize_names: true)
   end
 
-  articles
+  articles.reverse
 end
 
 def save_article(url, title, description)
