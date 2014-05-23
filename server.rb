@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'csv'
 require 'redis'
 require 'json'
 
@@ -54,7 +53,7 @@ post '/article_new/apple' do
   @url = params["article_url"]
   @source = params["source"]
   @description = params["description"]
-   if @description.length <= 20
+  if @description.length <= 20
      erb :form_page
   else
     save_article([@article,@url,@description])
@@ -62,8 +61,7 @@ post '/article_new/apple' do
     #   if csv != ''
     #     csv.puts([@article,@url,@source,@description])
     #   end
-    end
-    redirect '/'
   end
+    redirect '/'
 end
 
