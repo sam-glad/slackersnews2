@@ -1,7 +1,7 @@
 <% @read.each do |article| %>
     <li>
       <IMG SRC="arrow.gif">
-        <a href=<%= "#{article["url"]}" %> target="_blank" ><%= article["title"] %><small> </small>
+        <a href="<%= article["url"] %>" target="_blank" ><%= article["title"] %><small> </small>
           <br>
           <small><%= article["description"] %></small><br>
           <small><%= rand(1..100) %> points by someone <%= rand(1..59) %> minutes ago |</small><a href="comment.html"><small><%= rand(1..100) %> comments</small>
