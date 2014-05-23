@@ -31,16 +31,16 @@ def save_article(url, title, description)
   redis.rpush("slacker:articles", article.to_json)
 end
 
-def read_in_art
-  articles = []
-  CSV.foreach('views/data.csv' , headers: true) do |row|
-    articles << row.to_hash
-  end
-  articles.reverse
-end
+# def read_in_art
+#   articles = []
+#   CSV.foreach('views/data.csv' , headers: true) do |row|
+#     articles << row.to_hash
+#   end
+#   articles.reverse
+# end
 
 get '/' do
-  @read = read_in_art
+  @read = find_articles
   erb :index
 end
 
@@ -57,10 +57,11 @@ post '/article_new/apple' do
    if @description.length <= 20
      erb :form_page
   else
-    CSV.open("views/data.csv", "a") do |csv|
-      if csv != ''
-        csv.puts([@article,@url,@source,@description])
-      end
+    save_article([@article,@url,@source,@description])
+    # CSV.open("views/data.csv", "a") do |csv|
+    #   if csv != ''
+    #     csv.puts([@article,@url,@source,@description])
+    #   end
     end
     redirect '/'
   end
