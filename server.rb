@@ -56,7 +56,7 @@ post '/article_new/apple' do
   if @description.length <= 20
      erb :form_page
   else
-    save_article([@article,@url,@description])
+    save_article(@url,@title,@description)
     # CSV.open("views/data.csv", "a") do |csv|
     #   if csv != ''
     #     csv.puts([@article,@url,@source,@description])
