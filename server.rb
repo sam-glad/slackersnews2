@@ -48,10 +48,9 @@ get '/article_new' do
   erb :form_page
 end
 
-post '/article_new/apple' do
+post '/article_new' do
   @article = params["article"]
   @url = params["article_url"]
-  @source = params["source"]
   @description = params["description"]
   if @description.length <= 20
      erb :form_page
