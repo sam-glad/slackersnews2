@@ -49,7 +49,7 @@ end
 
 post '/article_new' do
   @article = params["title"]
-  @url = params["url"]
+  @url = params["article_url"]
   @description = params["description"]
   if @description.length <= 20
      erb :form_page
