@@ -29,14 +29,6 @@ def save_article(url, title, description)
   redis.rpush("slacker:articles", article.to_json)
 end
 
-# def read_in_art
-#   articles = []
-#   CSV.foreach('views/data.csv' , headers: true) do |row|
-#     articles << row.to_hash
-#   end
-#   articles.reverse
-# end
-
 get '/' do
   @read = find_articles
   erb :index
@@ -55,10 +47,6 @@ post '/article_new' do
      erb :form_page
   else
     save_article(@url,@article,@description)
-    # CSV.open("views/data.csv", "a") do |csv|
-    #   if csv != ''
-    #     csv.puts([@article,@url,@source,@description])
-    #   end
   end
     redirect '/'
 end
